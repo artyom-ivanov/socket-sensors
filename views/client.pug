@@ -1,0 +1,19 @@
+html
+	head
+		title Socket App
+		link(rel='stylesheet', href='https://unpkg.com/spectre.css/dist/spectre.min.css')
+	body
+		.container
+			.columns
+				.column.col-12
+					.empty
+						p.empty-title.h5(data-client=`${client}`) Client
+						- var s = `You are connected as client #${client}`;
+						p.empty-subtitle= s
+						.empty-action
+							a.btn.btn-primary.close Close
+						pre.code
+							code#debug
+
+		script(src='/socket.io/socket.io.js')
+		script(src='/device.js')

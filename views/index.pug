@@ -1,0 +1,19 @@
+html
+	head
+		title Socket App
+		link(rel='stylesheet', href='https://unpkg.com/spectre.css/dist/spectre.min.css')
+	body
+		.container
+			.columns
+				.column.col-12
+					.empty
+						p.empty-title.h5 Socket App
+						- var s = `Click the button to start a client #${client} connection. Open on device with gyroscope sensors.`;
+						p.empty-subtitle= s
+						.empty-action
+							a.btn.btn-primary(target="_blank", href=`/client/${client}`) Open client
+						pre.code
+							code#debug
+
+		script(src='/socket.io/socket.io.js')
+		script(src='main.js')
